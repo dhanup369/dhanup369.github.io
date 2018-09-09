@@ -9,33 +9,30 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<style>
+  <style>
 .navbar-brand{background: #009999;padding: 10px;width :150px;}
 .navbar-brand a{color:white;text-align:center;}
 .shadow-none .p-3 .mb-5 .bg-light .rounded{border-top: 10px;border-color: white}
-.inner-panel{background-color: #ffffff;margin:20px }
-.second{padding:0px;margin:10px;border:0px;}
+
+
 </style>
 
 </head>
 <!----------------------------------------------------------------------------------------------->
 <body>
 
- <div class="container">
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="file:///Users/dhanu/Desktop/hw.html" style="color:white;font:bold ;font-family:Georgia;font-weight: 20px;text-indent: 25px">Latitude</a>
+  <a class="navbar-brand" href="file:///Users/dhanu/Desktop/hw.html" style="color:white;font:bold ;font-family:Georgia;font-weight: 20px;text-indent: 25px;border-radius:5px">Latitude</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
    <span class="navbar-toggler-icon"></span>
   </button>
-  </button>
+  
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent" >
 
     
-    <ul class="nav navbar-nav navbar-right" >
+    <ul class="navbar-nav ml-auto" >
      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Plots
@@ -46,64 +43,59 @@
           <a class="dropdown-item" href="file:///Users/dhanu/Desktop/humid.html">Humidity</a>
           <a class="dropdown-item" href="file:///Users/dhanu/Desktop/wind.html">Wind Speed</a>
         <a class="dropdown-item" href="file:///Users/dhanu/Desktop/cloud.html">Cloudiness</a></div>
-       
       </li>
    
 
-     <li class="nav-item active">
+      <li class="nav-item active">
         
         <a class="nav-link" href="file:///Users/dhanu/Desktop/comparison.html" >Comparison <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="file:///Users/dhanu/Desktop/data.html">Data</a>
       </li>
-     
       
     </ul>
   
    </div>
 </nav>
- </div>
+ 
 <br>
 
-<div class="row">
-    <div class = "col-3 col-sm-6">
-        <div class = "inner-panel">
+
+<div class="row" style="margin: 20px">
+    <div class = "col-12 col-lg-6 col-md-6">
+        
           
-            <h3 class="header-title mt-2"><p class="font-weight-bold" style="color:#009999;font:bold ;font-family:Georgia;font-weight: 20px; text-align: center">Cloudiness</p> </h3><hr>
+            <h3><p class="font-weight-bold" style="color:#009999;font:bold ;font-family:Georgia;font-weight: 20px;">Latitude Vs Humidity</p> </h3><hr>
             
-                <img class="mr-3" src="/Users/dhanu/Desktop/UCBE/UCBEL201806DATA2-Class-Repository-DATA/12-Web/Homework/Instructions/Resources/assets/images/Fig3.png" alt="temperature"" alt="Generic placeholder image" style="width: 500px;height: 500px;">
+                <img class="mr-3" src="/Users/dhanu/Desktop/UCBE/UCBEL201806DATA2-Class-Repository-DATA/12-Web/Homework/Instructions/Resources/assets/images/Fig2.png" alt="Humidity" style="width: 300px;height: 300px ;float:left">
+            
                 
-                <p style="font-size:15px;text-align: justify; " > As expected, the weather becomes significantly warmer as one approaches the equator(0 deg Latitude).More interestingly, however, is the fact that the southern hemisphere tends to be warmer this time of year than the northern hemisphere.This may be due to the tilt of the earth at the time of the year this data was gathered.</p>
+                <p style="font-size:15px;text-align: justify; " > One thing of note here is that the variance in humidity tends to decrease at certain latitudes, such as from -20° to 0° latitude and at around 40° latitude. From -10° to 10° latitude, there is a cluster of cities that have 100% humidity. As latitude decreases from that range of latitudes, such clusters become more rare while common for the northern hemisphere.</p><p style="font-size:15px;text-align: justify; " >There are a few cities which reported 0% humidity. These cities are located somewhere  in northern Russia, likely in rural areas. It is possible those values were misreported or misrecorded, though the data on other Russia cities seemed fine. Most of the sampled cities had more than 50% humidity regardless of latitude location.</p><p style="font-size:15px;text-align: justify; " >Check out the navbar or click the images in the visualizations below for more graphs and analyses. You can also get back to the project summary homepage by clicking "Weather and Latitude" on the top left.</p>
             
-        </div>
-   </div>
+       
+ 
+    </div>
+ <div class="col-12 col-lg-6 col-md-6" >
 
- <div class="col-3 col-sm-6" >
-
-<div class="second">
-
-
-        <div class = "inner-panel">
+        
 
             <h3 class="header-title mt-2"><p class="font-weight-bold" style="color:#009999;font:bold ;font-family:Georgia;font-weight: 20px;text-align: center;">Visualizations</p> </h3><hr>
             
             <div class="row">
              
-            <div class="col"><img class="mr-3" src="/Users/dhanu/Desktop/UCBE/UCBEL201806DATA2-Class-Repository-DATA/12-Web/Homework/Instructions/Resources/assets/images/Fig1.png" alt="temperature"" alt="Generic placeholder image" style="width: 250px;height: 250px"></div>
-            
-            <div class="col"><img class="mr-3" src="/Users/dhanu/Desktop/UCBE/UCBEL201806DATA2-Class-Repository-DATA/12-Web/Homework/Instructions/Resources/assets/images/Fig2.png" alt="temperature"" alt="Generic placeholder image" style="width: 250px;height: 250px"></div>
-
-            <div class="w-100"></div>
+            <div class="col"><img class="mr-3" src="/Users/dhanu/Desktop/UCBE/UCBEL201806DATA2-Class-Repository-DATA/12-Web/Homework/Instructions/Resources/assets/images/Fig1.png" alt="temperature"style="width: 250px;height: 250px"></div>
             <span class="border border-info">
-            <div class="col"><img class="mr-3" src="/Users/dhanu/Desktop/UCBE/UCBEL201806DATA2-Class-Repository-DATA/12-Web/Homework/Instructions/Resources/assets/images/Fig3.png" alt="temperature"" alt="Generic placeholder image" style="width: 250px;height: 250px"></div></span>
-            <div class="col"><img class="mr-3" src="/Users/dhanu/Desktop/UCBE/UCBEL201806DATA2-Class-Repository-DATA/12-Web/Homework/Instructions/Resources/assets/images/Fig4.png" alt="temperature"" alt="Generic placeholder image" style="width: 250px;height: 250px"></div>
-        </div>
-    </div>
+            <div class="col"><img class="mr-3" src="/Users/dhanu/Desktop/UCBE/UCBEL201806DATA2-Class-Repository-DATA/12-Web/Homework/Instructions/Resources/assets/images/Fig2.png" alt="humiditye" style="width: 250px;height: 250px"></div></span>
+            <div class="w-100"></div>
+            <div class="col"><img class="mr-3" src="/Users/dhanu/Desktop/UCBE/UCBEL201806DATA2-Class-Repository-DATA/12-Web/Homework/Instructions/Resources/assets/images/Fig3.png" alt="cloudiness" style="width: 250px;height: 250px"></div>
+            <div class="col"><img class="mr-3" src="/Users/dhanu/Desktop/UCBE/UCBEL201806DATA2-Class-Repository-DATA/12-Web/Homework/Instructions/Resources/assets/images/Fig4.png" alt="windspeed" style="width: 250px;height: 250px"></div>
+        
+  
+</div>
+</div>
 </div>
 
-</div>
-</div>
 <div class="card text-center">
 
 <div class="card-footer text-muted">
@@ -115,7 +107,6 @@
     <a href="file:///Users/dhanu/Desktop/wind.html" class="btn btn-info">Windspeed</a>
     <a href="file:///Users/dhanu/Desktop/cloud.html" class="btn btn-info">Cloudiness</a>
     <a href="file:///Users/dhanu/Desktop/comparison.html" class="btn btn-info">Comparison</a>
-  
 </div>
 
 </div>
@@ -123,4 +114,3 @@
 
   </body>
 </html>
-
