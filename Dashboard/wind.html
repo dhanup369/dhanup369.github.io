@@ -1,80 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Temp</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-  <style>
-.navbar-brand{background: #009999;padding: 10px;width :150px;}
-.navbar-brand a{color:white;text-align:center;}
-.shadow-none .p-3 .mb-5 .bg-light .rounded{border-top: 10px;border-color: white}
-</style>
-
-</head>
-<!----------------------------------------------------------------------------------------------->
-<body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="../index.html" style="color:white;font:bold ;font-family:Georgia;font-weight: 20px;text-indent: 25px;border-radius:5px">Latitude</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-   <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent" >
-    <ul class="navbar-nav ml-auto" >
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Plots
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="MaxTemp.html">Max Temperature</a>
-        <a class="dropdown-item" href="humid.html">Humidity</a>
-        <a class="dropdown-item" href="wind.html">Wind Speed</a>
-        <a class="dropdown-item" href="cloud.html">Cloudiness</a></div>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="comparison.html" >Comparison <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="data.html">Data</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-<br>
-<div class="row" style="margin: 20px">
-  <div class = "col-12 col-lg-6 col-md-6">
-      <h3><p class="font-weight-bold" style="color:#009999;font:bold ;font-family:Georgia;font-weight: 20px;">Latitude Vs Windspeed</p> </h3><hr>
+  <head>
+    <meta charset="UTF-8">
+    <title>Temp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <style>
+    #footer{
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    </style>
+  </head>
+  <!----------------------------------------------------------------------------------------------->
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+      <a class="btn btn-info" href="../index.html" style="color:white;font:bold ;font-family:Georgia;font-size:25px;text-align: center;border-radius:5px">Latitude</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto" >
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Plots
+            </a>
             
-        <img class="mr-3" src="images/Fig4.png" alt="Windspeed" style="width:300px;height: 300px ;float:left">
-        <p style="font-size:15px;text-align: justify; "> Wind speed seems somewhat correlated with latitude. As distance from the equator increases, so does wind speed. Still, most of the sampled cities had wind speeds less than 15 mph. The variance of wind speed for each sampled city also seems to increase with distance away from the equator. Because the wind speed of most of the sampled cities are still less than 15 mph at great distances from the equator, I suspect that the increased variance is what is behind the apparent relationship between wind speed and latitude.</p>
-  </div>
-  <div class="col-12 col-lg-6 col-md-6" >
-      <h3 class="header-title mt-2"><p class="font-weight-bold" style="color:#009999;font:bold ;font-family:Georgia;font-weight: 20px;text-align: center;">Visualizations</p> </h3><hr>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="MaxTemp.html">Max Temperature</a>
+              <a class="dropdown-item" href="humid.html">Humidity</a>
+              <a class="dropdown-item" href="wind.html">Wind Speed</a>
+              <a class="dropdown-item" href="cloud.html">Cloudiness</a></div>
+              
+              
+            </li>
             
-      <div class="row">
-          <div class="col"><img class="mr-3" src="images/Fig1.png" alt="temperature" style="width: 250px;height: 250px"></div>
-          <div class="col"><img class="mr-3" src="images/Fig2.png" alt="Humidity" style="width: 250px;height: 250px"></div>
-          <div class="w-100"></div>
-          <div class="col"><img class="mr-3" src="images/Fig3.png" alt="Cloudiness" style="width: 250px;height: 250px"></div>
-          <span class="border border-info">
-          <div class="col"><img class="mr-3" src="images/Fig4.png" alt="windspeed" style="width: 250px;height: 250px"></div></span>
-      </div>
-  </div>
-</div>
-
-<div class="card text-center">
-  <div class="card-footer text-muted">
-    <a href="../index.html" class="btn btn-info">Home</a>
-    <a href="data.html" class="btn btn-info">Data</a>
-    <a href="MaxTemp.html" class="btn btn-info">Temperature</a>
-    <a href="humid.html" class="btn btn-info">Humidity</a>
-    <a href="cloud.html" class="btn btn-info">Cloudiness</a>
-    <a href="comparison.html" class="btn btn-info">Comparison</a>
-  </div>
-</div>
-</body>
-</html>
+            <li class="nav-item active">
+              
+              <a class="nav-link" href="comparison.html" >Comparison <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="data.html">Data<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="https://github.com/dhanup369/Projects/blob/master/Openweathermap_api.ipynb"><span class="sr-only">(current)</span>Code</a>
+            </li>
+            
+          </ul>
+        </div>
+      </nav>
+      <div class contaienr style="margin:0.5%;background:#e0e2e5";>
+        <div class="row">
+          <div class = "col-xs-4 col-sm-12 col-lg-5 col-md-12" style="margin:2%"; >
+            <div class="inner" style="margin:3%;padding:3% ;background:lightblue">
+              <h3 ><p  style="color:black;font-family:Georgia;">Latitude Vs Wind Speed</p> </h3><hr>
+              <img class="mr-3" src="images/Fig4.png" alt="Windspeed" style="width: 300px;height: 300px ;float:left">
+              <p style="font-size:15px;text-align: justify; " > Wind speed seems somewhat correlated with latitude. As distance from the equator increases, so does wind speed. Still, most of the sampled cities had wind speeds less than 15 mph. The variance of wind speed for each sampled city also seems to increase with distance away from the equator. Because the wind speed of most of the sampled cities are still less than 15 mph at great distances from the equator, I suspect that the increased variance is what is behind the apparent relationship between wind speed and latitude.</p>
+            </div>
+          </div>
+          <div class="col-xs-4 col-sm-12 col-lg-6 col-md-12" style="margin:2%">
+            <div class="inner" style="margin:2%;padding:3%;background:lightblue">
+              <h3 ><p style="color:black;font-family:Georgia;text-align: center;">Visualizations</p> </h3>        <hr>
+              <p style="font-size:10px">Click on the image </p>
+              <div class="row">
+                <div class="col" style="padding:3%">
+                  <a href="MaxTemp.html"> <img src="images/Fig1.png" alt="Max Temperature"style="width: 250px;height: 250px"></a></div>
+                  <div class="col" style="padding:3%"><a href="humid.html"><img src="images/Fig2.png"  alt="Humidity" style="width: 250px;height: 250px"></a></div>
+                  <div class="w-100"></div>
+                  <div class="col" style="padding:3%"><a href="cloud.html"><img src="images/Fig3.png" alt="cloudiness" style="width: 250px;height: 250px"></a></div>
+                  <div class="col" style="margin:1%;border:1px darkgreen box-shadow:0 0 20px  rgba(0,0,0,0.6);
+                    -moz-box-shadow: 0 0 20px  rgba(0,0,0,0.6);
+                    -webkit-box-shadow: 0 0 20px  rgba(0,0,0,0.6);
+                    -o-box-shadow: 0 0 20px  rgba(0,0,0,0.6);"><a href="wind.html"><img src="images/Fig4.png" alt="Windspeed" style="margin:5%;width: 250px;height: 250px"></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="footer">
+            <div class="col-xs-4 col-sm-12 col-lg-12 col-md-12">
+              <a href="../index.html" class="btn btn-info">Home</a>
+              <a href="data.html" class="btn btn-info">Data</a>
+              <a href="humid.html" class="btn btn-info">Humidity</a>
+              <a href="cloud.html" class="btn btn-info">Cloudiness</a>
+              <a href="comparison.html" class="btn btn-info">Comparison</a>
+              <a href="MaxTemp.html" class="btn btn-info">Temperature</a>
+            </div>
+          </div>
+        </body>
+      </html>

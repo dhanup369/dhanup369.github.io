@@ -1,116 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>WeatherPy-copy</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<style>
-#footer{
+  <head>
+    <meta charset="UTF-8">
+    <title>WeatherPy-copy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style>
+    #footer{
     display: table;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-}
-</style>
-</head>
-<body>
-
- <nav class="navbar navbar-expand-lg navbar-light bg-light" >
-  <a class="btn btn-info" href="index.html" style="color:white;font:bold ;font-family:Georgia;font-size:25px;text-align: center;border-radius:5px">Latitude</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-    <ul class="navbar-nav ml-auto" >
-     
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Plots
-        </a>
-    
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="Dashboard/MaxTemp.html">Max Temperature</a>
-          <a class="dropdown-item" href="Dashboard/humid.html">Humidity</a>
-          <a class="dropdown-item" href="Dashboard/wind.html">Wind Speed</a>
-        <a class="dropdown-item" href="Dashboard/cloud.html">Cloudiness</a></div>
-        
-        
-      </li>
-   
-
-      <li class="nav-item active">
-        
-        <a class="nav-link" href="Dashboard/comparison.html" >Comparison <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-      <a class="nav-link" href="Dashboard/data.html">Data<span class="sr-only">(current)</span></a>
-      </li>
-     <li class="nav-item active">
-      <a class="nav-link" href="Dashboard/data.html"><span class="sr-only">(current)</span>Code</a>
-      </li>
+    }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+      <a class="btn btn-info" href="index.html" style="color:white;font:bold ;font-family:Georgia;font-size:25px;text-align: center;border-radius:5px">Latitude</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto" >
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Plots
+            </a>
+            
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="MaxTemp.html">Max Temperature</a>
+              <a class="dropdown-item" href="humid.html">Humidity</a>
+              <a class="dropdown-item" href="wind.html">Wind Speed</a>
+              <a class="dropdown-item" href="cloud.html">Cloudiness</a></div>
+              
+              
+            </li>
+            
+            <li class="nav-item active">
+              
+              <a class="nav-link" href="comparison.html" >Comparison <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="data.html">Data<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="https://github.com/dhanup369/Projects/blob/master/Openweathermap_api.ipynb"><span class="sr-only">(current)</span>Code</a>
+            </li>
+            
+          </ul>
+        </div>
+      </nav>
+      <!-------------Body------------------->
       
-    </ul>
-   </div>
-</nav>
-
-<!-------------Body------------------->
-  
- <div class contaienr style="margin:0.5%;background:#e0e2e5";>
-      <div class="row">
-        <div class = "col-xs-4 col-sm-12 col-lg-5 col-md-12" style="margin:2%"; >
-          <div class="inner" style="margin:3%;padding:3% ;background:lightblue">
-             <h3 ><p  style="color:black;font-family:Georgia;">Summary: Latitude Vs X</p> </h3><hr>
-            
-                <img class="mr-3" src="Dashboard/images/Fig1.png" alt="temperature" style="width: 300px;height: 300px ;float:left">
-            
+      <div class contaienr style="margin:0.5%;background:#e0e2e5";>
+        <div class="row">
+          <div class = "col-xs-4 col-sm-12 col-lg-5 col-md-12" style="margin:2%"; >
+            <div class="inner" style="margin:3%;padding:3% ;background:lightblue">
+              <h3 ><p  style
+                
+                <img class="mr-3" src="images/Fig1.png" alt="temperature" style="width: 300px;height: 300px ;float:left">
+                
                 <h5 class="mt-0">Objective</h5>
                 <p style="font-size:15px;text-align: justify; " > The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from OpenWeatherMap API to assemble a dataset on over 500 cities.After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs.</p> <p style="font-size:15px;text-align: justify; ">latitude. Factors we looked at included: temperature. cloudiness, wind speed amd humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
+              </div>
+              
             </div>
-        
+            
+            <div class="col-xs-4 col-sm-12 col-lg-6 col-md-12" style="margin:1%">
+              <div class="inner" style="margin:2%;padding:3%;background:lightblue">
+                <h3 ><p style="color:black;font-family:Georgia;text-align: center;">Visualizations</p> </h3><hr>
+                <p style="font-size:10px">Click on the image </p>
+                <div class="row">
+                  <div class="col" style="padding:3%"><a href="MaxTemp.html"> <img src="images/Fig1.png" alt="temperature"style="width: 250px;height: 250px"></a></div>
+                  <div class="col" style="padding:3%"><a href="humid.html"><img src="images/Fig2.png"  alt="Humidity" style="width: 250px;height: 250px"></a></div>
+                  <div class="w-100"></div>
+                  <div class="col" style="padding:3%"><a href="cloud.html"><img src="images/Fig3.png"  alt="cloudiness" style="width: 250px;height: 250px"></a></div>
+                  <div class="col" style="padding:3%"><a href="wind.html"><img src="images/Fig4.png"  alt="windspeed" style="width: 250px;height: 250px"></a></div>
+                </div>
+              </div>
+            </div>
           </div>
-   
-
-
-    <div class="col-xs-4 col-sm-12 col-lg-6 col-md-12" style="margin:1%">
-      <div class="inner" style="margin:2%;padding:3%;background:lightblue">
-          <h3 ><p style="color:black;font-family:Georgia;text-align: center;">Visualizations</p> </h3><hr>
-            <p style="font-size:10px">Click on the image </p>
-            <div class="row">
-            <div class="col" style="padding:3%"><a href="Dashboard/MaxTemp.html"> <img src="Dashboard/images/Fig1.png" alt="temperature"style="width: 250px;height: 250px"></a></div>
-            <div class="col" style="padding:3%"><a href="Dashboard/humid.html"><img src="Dashboard/images/Fig2.png"  alt="Humidity" style="width: 250px;height: 250px"></a></div>
-            <div class="w-100"></div>
-            <div class="col" style="padding:3%"><a href="Dashboard/cloud.html"><img src="Dashboard/images/Fig3.png"  alt="cloudiness" style="width: 250px;height: 250px"></a></div>
-            <div class="col" style="padding:3%"><a href="Dashboard/wind.html"><img src="Dashboard/images/Fig4.png"  alt="windspeed" style="width: 250px;height: 250px"></a></div>
         </div>
-    </div>
-</div>
-</div>
-
-</div>
-
-
-
-
-
-
-  
-  <div id="footer">
-  <div class="col-xs-4 col-sm-12 col-lg-12 col-md-12" >
-   
-    <a href="Dashboard/data.html" class="btn btn-info">Data</a>
-    <a href="Dashboard/MaxTemp.html" class="btn btn-info">Temperature</a>
-    <a href="Dashboard/humid.html" class="btn btn-info">Humidity</a>
-    <a href="Dashboard/wind.html" class="btn btn-info">Windspeed</a>
-    <a href="Dashboard/cloud.html" class="btn btn-info">Cloudiness</a>
-    <a href="Dashboard/comparison.html" class="btn btn-info">Comparison</a>
- </div>
-</div>
-</body>
-</html>
+        <div id="footer">
+          <div class="col-xs-4 col-sm-12 col-lg-12 col-md-12" >
+            
+            <a href="data.html" class="btn btn-info">Data</a>
+            <a href="MaxTemp.html" class="btn btn-info">Temperature</a>
+            <a href="humid.html" class="btn btn-info">Humidity</a>
+            <a href="wind.html" class="btn btn-info">Windspeed</a>
+            <a href="cloud.html" class="btn btn-info">Cloudiness</a>
+            <a href="comparison.html" class="btn btn-info">Comparison</a>
+          </div>
+        </div>
+      </body>
+    </html>
