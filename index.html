@@ -10,83 +10,99 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <style>
-.inner-panel{background-color: #ffffff;margin:20px }
-.navbar-brand{
-  background: #009999;
-  padding: 10px;
-  width :150px;
-
-}
-.navbar-brand a{
-  color:white;
-  text-align:center;
-}
-.shadow-none .p-3 .mb-5 .bg-light .rounded{
-  border-top: 10px;
-  border-color: white
+#footer{
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 </style>
 </head>
-<!-------------------------------------->
-
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light" >
-  <a class="navbar-brand" href="index.html" style="color:white;font:bold ;font-family:Georgia;font-weight: 20px;text-indent: 25px;border-radius: 5px">Latitude</a>
+
+ <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+  <a class="btn btn-info" href="index.html" style="color:white;font:bold ;font-family:Georgia;font-size:25px;text-align: center;border-radius:5px">Latitude</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
     <ul class="navbar-nav ml-auto" >
-     <li class="nav-item dropdown">
+     
+      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Plots
         </a>
-       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
         <a class="dropdown-item" href="Dashboard/MaxTemp.html">Max Temperature</a>
           <a class="dropdown-item" href="Dashboard/humid.html">Humidity</a>
           <a class="dropdown-item" href="Dashboard/wind.html">Wind Speed</a>
         <a class="dropdown-item" href="Dashboard/cloud.html">Cloudiness</a></div>
+        
+        
       </li>
+   
+
       <li class="nav-item active">
+        
         <a class="nav-link" href="Dashboard/comparison.html" >Comparison <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="Dashboard/data.html">Data</a>
+      <li class="nav-item active">
+      <a class="nav-link" href="Dashboard/data.html">Data<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://github.com/dhanup369/Projects/blob/master/Openweathermap_api.ipynb" target="_blank">Code</a>
+     <li class="nav-item active">
+      <a class="nav-link" href="Dashboard/data.html"><span class="sr-only">(current)</span>Code</a>
       </li>
-     </ul>
+      
+    </ul>
    </div>
 </nav>
 
-  <div class="row">
-    <div class = "col-12 col-lg-6 col-md-6">
-        <div class = "inner-panel">
-          <h3 class="header-title mt-2"><p class="font-weight-bold" style="color:#009999;font:bold ;font-family:Georgia;font-weight: 20px;">Summary: Latitude Vs X</p> </h3><hr>
+<!-------------Body------------------->
+  
+ <div class contaienr style="margin:0.5%";>
+      <div class="row">
+        <div class = "col-xs-4 col-sm-12 col-lg-5 col-md-12" style="margin:1%"; >
+          <div class="inner" style="margin:3%;padding:3% ;background:lightblue">
+             <h3 ><p  style="color:black;font-family:Georgia;">Summary: Latitude Vs X</p> </h3><hr>
             
                 <img class="mr-3" src="Dashboard/images/Fig1.png" alt="temperature" style="width: 300px;height: 300px ;float:left">
             
                 <h5 class="mt-0">Objective</h5>
                 <p style="font-size:15px;text-align: justify; " > The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from OpenWeatherMap API to assemble a dataset on over 500 cities.After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs.</p> <p style="font-size:15px;text-align: justify; ">latitude. Factors we looked at included: temperature. cloudiness, wind speed amd humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
-        </div>
-  </div>
-  <div class="col-sm-3 col-lg-6 col-md-6" >
-        <div class = "inner-panel">
-          <h3 class="header-title mt-2"><p class="font-weight-bold" style="color:#009999;font:bold ;font-family:Georgia;font-weight: 20px;text-align: center;">Visualizations</p> </h3><hr>
+            </div>
+        
+          </div>
+   
+
+
+    <div class="col-xs-4 col-sm-12 col-lg-6 col-md-12" style="margin:1%">
+      <div class="inner" style="margin:2%;padding:3%;background:lightblue">
+          <h3 ><p style="color:black;font-family:Georgia;text-align: center;">Visualizations</p> </h3><hr>
             <p style="font-size:10px">Click on the image </p>
             <div class="row">
-            <div class="col"><a href="Dashboard/MaxTemp.html"> <img src="Dashboard/images/Fig1.png" alt="temperature"style="width: 250px;height: 250px"></a></div>
-            <div class="col"><a href="Dashboard/humid.html"><img src="Dashboard/images/Fig2.png"  alt="humidity" style="width: 250px;height: 250px"></a></div>
+            <div class="col" style="padding:3%"><a href="Dashboard/MaxTemp.html"> <img src="Dashboard/images/Fig1.png" alt="temperature"style="width: 250px;height: 250px"></a></div>
+            <div class="col" style="padding:3%"><a href="Dashboard/humid.html"><img src="Dashboard/images/Fig2.png"  alt="Humidity" style="width: 250px;height: 250px"></a></div>
             <div class="w-100"></div>
-            <div class="col"><a href="Dashboard/cloud.html"><img src="Dashboard/images/Fig3.png"  alt="cloudiness" style="width: 250px;height: 250px"></a></div>
-            <div class="col"><a href="Dashboard/wind.html"><img src="Dashboard/images/Fig4.png"  alt="windspeed" style="width: 250px;height: 250px"></a></div>
+            <div class="col" style="padding:3%"><a href="Dashboard/cloud.html"><img src="Dashboard/images/Fig3.png"  alt="cloudiness" style="width: 250px;height: 250px"></a></div>
+            <div class="col" style="padding:3%"><a href="Dashboard/wind.html"><img src="Dashboard/images/Fig4.png"  alt="windspeed" style="width: 250px;height: 250px"></a></div>
         </div>
     </div>
 </div>
 </div>
-<div class="card text-center">
-  <div class="card-footer text-muted">
+
+</div>
+
+
+
+
+
+
+  
+  <div id="footer">
+  <div class="col-xs-4 col-sm-12 col-lg-12 col-md-12" >
    
     <a href="Dashboard/data.html" class="btn btn-info">Data</a>
     <a href="Dashboard/MaxTemp.html" class="btn btn-info">Temperature</a>
@@ -94,7 +110,7 @@
     <a href="Dashboard/wind.html" class="btn btn-info">Windspeed</a>
     <a href="Dashboard/cloud.html" class="btn btn-info">Cloudiness</a>
     <a href="Dashboard/comparison.html" class="btn btn-info">Comparison</a>
-  </div>
+ </div>
 </div>
 </body>
 </html>
