@@ -4,51 +4,30 @@ function buildMetadata(sample) {
    d3.select("#sample-metadata").html("");
    Object.entries(metadata).forEach(([key, value]) => 
    d3.select("#sample-metadata").append("div").html(`${key}:${value}`));
-  }); 
-};
-
-function buildCharts(sample) {
-  d3.json("/samples/"+sample).then((samdata) =>{
-    
-  
-  //Pie Chart 
-  var data1 = [{
-    values: samdata.sample_values.slice(0,10),
-    labels:samdata.otu_ids.slice(0,10),
-    hovertext:samdata.otu_labels.slice(0,10),
-    type: "pie"
-  }];
-
-  var layout = {
-    height:400,
-    width:500
-  };
-//Gauge Chart
-// Enter a speed between 0 and 180
-var level = 35;
-// Trig to calc meter point
-var degrees = 180 - level,
+   var WFREQ=metadata.WFREQ; 
+   var level = WFREQ;
+   var degrees = 180 - (level*22.5) +10,
      radius = .5;
-var radians = degrees * Math.PI / 180;
-var x = radius * Math.cos(radians);
-var y = radius * Math.sin(radians);
+   var radians = degrees * Math.PI / 180;
+   var x = radius * Math.cos(radians);
+   var y = radius * Math.sin(radians);
 
 // Path: may have to change to create a better triangle
-var mainPath = 'M -.0 -0.025 L .0 0.025 L ',
+   var mainPath = 'M -.0 -0.025 L .0 0.025 L ',
      pathX = String(x),
      space = ' ',
      pathY = String(y),
      pathEnd = ' Z';
-var path = mainPath.concat(pathX,space,pathY,pathEnd);
+   var path = mainPath.concat(pathX,space,pathY,pathEnd);
 
-var data = [{ type: 'scatter',
+   var data = [{ type: 'scatter',
    x: [0], y:[0],
     marker: {size: 28, color:'850000'},
     showlegend: false,
     name: 'speed',
     text: level,
     hoverinfo: 'text+name'},
-  { values: [50/9, 50/9, 50/9, 50/9, 50/9, 50/9,50/9,50/9,50/9, 50],
+  { values: [50/9,50/9,50/9,50/9,50/9,50/9,50/9,50/9,50/9,50],
   rotation: 90,
   text: ['8-9', '7-8', '6-7', '5-6',
             '4-5', '3-4', '2-3','1-2','0-1',''],
@@ -86,6 +65,30 @@ var layout1 = {
              showgrid: false, range: [-1, 1]}
 };
 
+Plotly.newPlot('gauge', data, layout1);
+
+});
+  
+  };
+
+function buildCharts(sample) {
+  d3.json("/samples/"+sample).then((samdata) =>{
+    
+  
+  //Pie Chart 
+  var data1 = [{
+    values: samdata.sample_values.slice(0,10),
+    labels:samdata.otu_ids.slice(0,10),
+    hovertext:samdata.otu_labels.slice(0,10),
+    type: "pie"
+  }];
+
+  var layout = {
+    height:400,
+    width:500
+  };
+
+
 
 //Bubble Chart
 var trace3 = {
@@ -110,7 +113,6 @@ var layout3 = {
 };
 
 Plotly.newPlot("bubble", data2, layout3);
-Plotly.newPlot('gauge', data, layout1);
 Plotly.newPlot("pie", data1, layout);
 });
 };
